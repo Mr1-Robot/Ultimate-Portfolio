@@ -1,0 +1,68 @@
+.footer {
+    background: var(--color-primary);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 7rem;
+}
+
+.footer a {
+    color: var(--color-bg);
+}
+
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footer .logo a:hover {
+    color: var(--color-white);
+}
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.permalinks a:hover {
+    color: var(--color-white);
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer__socials a:hover {
+    color: var(--color-white);
+}
+
+.footer__socials a:hover .footer__icons {
+    transform: scale(1.5);
+    color: var(--color-white);
+}
+
+.footer__socials .footer__icons {
+    margin-right: 1rem;
+    transition: var(--transition);
+}
+
+
+/* ************** MEDIA QURIES(SMALL DEVIECS) ************* */
+
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer__socials {
+        flex-direction: column;
+    }
+}

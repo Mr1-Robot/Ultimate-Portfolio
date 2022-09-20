@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom"
+import App from "./App"
+import "./index.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const section = document.querySelectorAll('section');
+const windowHeight = window.innerHeight;
+const navigation = document.querySelector('nav a');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+console.log(windowHeight);
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    section.forEach(function(section, i) {
+        if(section.offsetTop < scrollTop + windowHeight/2 && scrollTop < section.offsetTop + windowHeight/2) {
+            navigation.children[i].classList.add('active')
+        }
+    });
+});
+
+ReactDOM.render(<App />, document.querySelector("#root"));
