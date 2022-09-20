@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
-import ME from '../../assets/mrrobot1.png'
+import ME from '../../assets/me.png'
 import HeaderSocial from './HeaderSocial'
 import { Link } from 'react-scroll'
 
